@@ -1,2 +1,4 @@
 RewriteEngine on
-RewriteRule (.*) https://tritchforcongress.com/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^printmotor\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.printmotor\.com$
+RewriteRule ^(.*)$ "https\:\/\/tritchforcongress\.com\/$1" [R=301,L]
